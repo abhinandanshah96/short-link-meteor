@@ -3,7 +3,7 @@ import React from 'react';
 import { Router, Route, browserHistory } from 'react-router';
 
 import Signup from '../ui/Signup'
-import Links from '../ui/Links'
+import Link from '../ui/Link'
 import Login from '../ui/Login'
 import NotFound from '../ui/NotFound'
 
@@ -41,7 +41,7 @@ export const onAuthChange = (isAuthenticated) => {
 export const routes = (
 	<Router history={browserHistory}>
 		<Route path="/" component={Login} onEnter={onEnterPublicPage} />
-		<Route path="/links" component={Links} onEnter={onEnterPrivatePage} />
+		<Route path="/links" component={Link} onEnter={onEnterPrivatePage} />
 		<Route path="/signup" component={Signup} onEnter={onEnterPublicPage} />
 		<Route path="*" component={NotFound} />
 	</Router>
