@@ -19,6 +19,7 @@ Meteor.startup(() => {
 			// Set HTTP Body
 			// res.write('<h1>Hello</h1>');
 			// End response
+			Meteor.call('links.track', _id);
 			res.end();
 		}
 		next();
