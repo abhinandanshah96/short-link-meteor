@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import React from 'react';
 import { Accounts } from 'meteor/accounts-base';
 
@@ -9,16 +10,16 @@ export default class Link extends React.Component{
 		e.preventDefault();
 		const url = this.refs.url.value.trim();
 		if(url){
-			Links.insert({ url: url });
+			Meteor.call('links.insert', url);
 			this.refs.url.value = '';
 		}
-		console.log("Submitted", url, ".");
+		console.log("Submitted", url)	;
 	}
 
 	onLogout(){
 		Accounts.logout();
 	}
-
+	
 	render(){
 		return(
 				<div>
