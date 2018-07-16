@@ -9,9 +9,10 @@ const PrivateHeader = (props) => {
 	}
 	return (
 		<div className="title-bar">
-			<div className="wrapper">
-				<h1>{props.title}</h1>
+			<div className="title-bar__content">
+				<h1 className="title-bar__title">{props.title}</h1>
 				{renderSub()}
+				<button onClick={ () => Accounts.logout() }  className="button--link-text">Logout</button>
 			</div>
 		</div>
 	)
