@@ -50,6 +50,9 @@ export default class LinksListItem extends React.Component {
 					<button onClick={ () => { Meteor.call('links.setVisiblity', this.props._id, !this.props.visible )} }>
 						{ this.props.visible ? 'Hide' : 'Show' }
 					</button>
+					<button onClick={() => window.open(this.props.url, '_blank')}  >
+					 Visit
+					</button>
 
 				</p>
 			</div>
