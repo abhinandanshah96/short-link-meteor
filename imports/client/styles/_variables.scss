@@ -1,12 +1,17 @@
 /* Color */
 $grey: #dddddd;
 $brand-primary: #5b4681;
+$light-grey: #f9f9f9;
+$dark-grey: #777777;
+
+
 /* Spaning */
 $space: 1.4rem;
-$site-max-width: 50rem;
+$site-max-width: 70rem;
 
 /*Font Sizes*/
 $base-font-size: 1.6rem;
+$large-font-size: 1.8rem;
 
 /*Boxed View*/
 $boxed-view-overlay-bg: $grey;
@@ -24,3 +29,8 @@ $input-spacing: 1rem;
 $button-bg: $brand-primary;
 $button-color: white;
 $button-pill-color: #5b4681; 
+ /* ITEMS */
+
+ $item-bg: $light-grey;
+ $item-border: darken($item-bg, 8%);
+ $item-text-color: $dark-grey;

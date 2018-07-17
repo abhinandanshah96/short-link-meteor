@@ -33,16 +33,15 @@ export default class LinksListItem extends React.Component {
 		let visitMessage = this.props.visitedCount <= 1 ? 'visit' : 'visits';
 		if(this.props.lastVisitedAt !== null){
 			this.visitedAt = `visited ${moment(this.props.lastVisitedAt).fromNow()}`;
-		}
-		return <p>{this.props.visitedCount} {visitMessage} --- {this.visitedAt}</p>
+		};
+		return <p className="item__message">{this.props.visitedCount} {visitMessage} ( {this.visitedAt} )</p>
 	}
 
 	render(){
 		return (
-			<div>
-				<p> {this.props.url} ==> 
+			<div className="item">
+				<h2> {this.props.url} </h2>
 					<a href={this.props.shortUrl}> {this.props.shortUrl} </a>
-					<i>{ this.props.visible.toString() }</i>
 					{ this.renderStats() }
 					<button  className="button button--pill" id={this.props._id} ref='copy' data-clipboard-text={this.props.shortUrl}>
 					{ this.state.justCopied ? 'Copied' : 'Copy' }
@@ -50,11 +49,9 @@ export default class LinksListItem extends React.Component {
 					<button className="button button--pill" onClick={ () => { Meteor.call('links.setVisiblity', this.props._id, !this.props.visible )} }>
 						{ this.props.visible ? 'Hide' : 'Show' }
 					</button>
-					<button className="button button--pill" onClick={() => window.open(this.props.url, '_blank')}  >
+					<button className="button button--pill" onClick={() => { Meteor.call('links.track', this.props._id); window.open(this.props.url, '_blank')}}  >
 					 Visit
 					</button>
-
-				</p>
 			</div>
 		)
 	}
