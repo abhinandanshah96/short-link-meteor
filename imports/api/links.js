@@ -19,11 +19,15 @@ Meteor.methods({
 		if(!this.userId) {
 			throw new Meteor.Error('unauthorized');
 		}
+		// Simpl Schema does not take url without protocol. It appends one if not present.
+		if(url.slice(0,7) !== 'http://' && url.slice(0,8) !== 'https://' && url.slice(0,6) !== 'ftp://'){
+			url = 'http://' + url;
+		}
 		new SimpleSchema ({
 			url: {
 				type: String,
 				label: 'Your link',
-				regEx: SimpleSchema.RegEx.Url
+				regEx: SimpleSchema.RegEx.Url,
 			}
 		}).validate({ url });	
 

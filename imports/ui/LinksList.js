@@ -8,7 +8,6 @@ import FlipMove from 'react-flip-move';
 import LinksListItem from './LinksListItem'
 
 export default class LinksList extends React.Component {
-
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -32,6 +31,7 @@ export default class LinksList extends React.Component {
 		this.linksTracker.stop();
 	};
 
+	// Renderer
 	renderLinksListItems(){
 		if(this.state.links.length === 0){
 			return (

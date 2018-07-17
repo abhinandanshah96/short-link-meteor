@@ -30,6 +30,10 @@
 	margin: 0 ($space / 2) 0 0;
 }
 
+.button--pill:hover {
+	background-color: $brand-sec-color;
+}
+
 .button--link-text {
 	background: none;
 	padding: 0;
