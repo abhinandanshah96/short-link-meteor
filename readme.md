@@ -20,5 +20,29 @@ React is a powerful isomorphic JavaScript library that uses server-side renderin
 ## Short - Link
 
 Short - Link allows users to store links and provide them with a shortned link for ease of use. Users can also hide the links to a separate list.
+> Video desmostration coming soon
 
+## Demo
 
+Try it yourself at heroku : [short-link-abhi.herokuapp.com](https://short-link-abhi.herokuapp.com/)
+
+## Description
+
+Technologies used: Meteor.js React.js and Scss
+Modules used: clipboard, moment, shortid, simpl-schema, ^more in package.json^
+To run:
+(Make sure you have [installed meteor](https://www.meteor.com/install))
+
+    git clone https://github.com/abhinandanshah96/short-link-meteor.git
+    cd short-link-meteor/
+    meteor npm install
+    meteor
+
+## To Dos:
+- Video demo
+- Currently it's using MLab's external db which adds a lot of latency. Do something about it.
+- Testing using Mocha.
+- May be add a delete button
+- Better 404 page.
+- Email validation system & may be a mailer
+- Complete Documentation
