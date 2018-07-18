@@ -10,8 +10,10 @@ export default () => {
 		<div>
 			<PrivateHeader title='Your Links' />
 			<div className="wrapper" >
-				<LinksListFilters />
-				<AddLink />
+				<div className="wrapper--side">
+					<LinksListFilters />
+					<AddLink />
+				</div>				
 				<LinksList />
 			</div>
 		</div>			
