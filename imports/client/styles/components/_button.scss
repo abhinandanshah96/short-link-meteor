@@ -7,6 +7,7 @@
 	text-transform: capitalize;
 	font-size: $base-font-size;
 	margin-bottom: $space;
+	min-width: 9rem;
 	/*line-height: 1.2rem;*/
 }
 
@@ -22,16 +23,17 @@
 
 }
 
+.button--add-link {
+	max-width: 50rem;
+	float: right;
+}
+
 .button--pill {
 	background-color: transparent;
 	border: 1px solid $button-pill-color;
 	color: $button-pill-color;
 	padding: .3rem 0.8rem;
 	margin: 0 ($space / 2) 0 0;
-}
-
-.button--pill:hover {
-	background-color: $brand-sec-color;
 }
 
 .button--link-text {

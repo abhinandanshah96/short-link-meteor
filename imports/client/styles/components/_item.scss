@@ -9,11 +9,16 @@
 		margin-bottom: 1rem;
 		text-overflow: ellipsis;
 		overflow: hidden;
+		max-height: 3rem;
+		transition: max-height 2s;
 	}:hover{
 		/*overflow: visible;*/
+		word-wrap: break-word;
 		white-space: normal;
+		max-height: 50rem;
 	}
 }
+
 
 .item__message-right {
     position: absolute;

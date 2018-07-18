@@ -17,17 +17,3 @@ export default () => {
 		</div>			
 	);
 };
-
-
-// export default class Link extends React.Component{	
-// 	render(){
-// 		return(
-// 				<div>
-// 					<PrivateHeader title='Your Links' />
-// 					<LinksList />
-// 					<AddLink />
-// 				</div>
-// 			)
-// 	};
-// };
-
