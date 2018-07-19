@@ -5,8 +5,8 @@ import { Links } from '../api/links';
 import { Session } from 'meteor/session';
 import FlipMove from 'react-flip-move';
 
-import LinksListItem from './LinksListItem'
-
+import LinksListItem from './LinksListItem';
+import Social from './Social';
 export default class LinksList extends React.Component {
 	constructor(props) {
 		super(props);
@@ -55,9 +55,11 @@ export default class LinksList extends React.Component {
 					<div>
 					 	<FlipMove 
 					 		staggerDelayBy='60'
-					 		maintainContainerHeight={true}
+					 		maintainContainerHeight='true'
 					 	>
 							{this.renderLinksListItems()}
+							{Session.get('showVisible') ? undefined : <Social />}
+
 						</FlipMove>
 					</div>
 				</div>

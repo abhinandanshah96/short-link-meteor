@@ -8,7 +8,7 @@ import AddLink from './AddLink';
 export default () => {
 	return (
 		<div>
-			<PrivateHeader title='Your Links' />
+			<PrivateHeader title='Links Shortner' />
 			<div className="wrapper" >
 				<div className="wrapper--side">
 					<LinksListFilters />
